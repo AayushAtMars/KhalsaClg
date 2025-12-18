@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3055ba;
+  --color-secondary: #24c5e5;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-dark: #1f2937;
+
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-black;
+  }
+  h1 {
+    /* @apply text-3xl font-bold; */
+  }
+}
+
+
+/* aa */
+@layer utilities {
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-out;
+  }
+}
